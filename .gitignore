@@ -2,3 +2,4 @@ chroma_db/
 venv/
 *.mp3
 __pycache__/
+.env

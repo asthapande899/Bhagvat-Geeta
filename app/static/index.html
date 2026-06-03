@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita AI Counselor</title>
+    <!-- Google Fonts: Cinzel for headers, Outfit for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Settings -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/krishna_banner.png" alt="🕉️ Krishna" class="sidebar-banner" onerror="this.style.display='none'">
+                <h2>Settings & Blessings</h2>
+            </div>
+            
+            <div class="gold-divider"></div>
+            
+            <div class="gold-divider"></div>
+            
+            <div class="settings-group toggle-group">
+                <label class="switch-container">
+                    <input type="checkbox" id="voice-toggle" checked>
+                    <span class="switch-slider"></span>
+                    <span class="toggle-text"><i class="fa-solid fa-volume-high icon-gold"></i> Krishna's Voice</span>
+                </label>
+            </div>
+            
+            <div class="settings-group audio-player-container" id="flute-container">
+                <p class="audio-label"><i class="fa-solid fa-music icon-gold"></i> Meditative Background Music</p>
+                <audio id="bg-flute" controls loop>
+                    <source src="/api/flute" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <span class="audio-caption">Loop soft ambient music while chatting.</span>
+            </div>
+            
+
+            
+            <div class="sidebar-footer">
+                <p>Made with devotion using AI & the eternal wisdom of the Gita 🙏</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Console -->
+        <main class="chat-console">
+            <!-- Header Card -->
+            <header class="console-header">
+                <h1>🕉️ Bhagavad Gita AI Counselor</h1>
+                <div class="gold-divider"></div>
+                <p class="header-quote">
+                    "When Arjuna was confused on the battlefield of life, Krishna answered his questions with eternal wisdom.<br>
+                    Now, ask your questions and find guidance through the timeless teachings of the Bhagavad Gita."
+                </p>
+            </header>
+
+            <!-- Chat Message List -->
+            <div class="chat-messages-container" id="chat-messages">
+                <!-- Messages will be dynamically rendered here via JS -->
+            </div>
+
+            <!-- Chat Input Area -->
+            <footer class="chat-input-area">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="What is troubling your soul today? Ask anything about life..." autocomplete="off">
+                    <button type="submit" id="chat-submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
